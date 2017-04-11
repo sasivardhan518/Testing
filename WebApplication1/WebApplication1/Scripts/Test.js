@@ -26,6 +26,10 @@ var viewModel = function () {
         }
         return obj;
     };
+    var deleteFromList = function (data, event) {
+        sortConditions.remove(this);
+        updateList();
+    }
     var rowAttributeList = [{ Name: "a", Description: "1" }, { Name: "b", Description: "2" }, { Name: "c", Description: "3" }, { Name: "d", Description: "4" }];
     var addCondition = function () {
         if (getRemaining())
@@ -75,7 +79,8 @@ var viewModel = function () {
         sortConditions: sortConditions,
         rowAttributeList: rowAttributeList,
         addCondition: addCondition,
-        updateRowList: updateRowList
+        updateRowList: updateRowList,
+        deleteFromList: deleteFromList
     }
 }();
 

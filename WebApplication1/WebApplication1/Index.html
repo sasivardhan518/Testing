@@ -9,6 +9,7 @@
     <button data-bind="click:addCondition">Add condition</button>
     <div data-bind="foreach:sortConditions">
         <select data-bind="event:{change : $root.updateRowList},options:rowList,optionsCaption:'CHOOSE ITEM..',optionsText:'Description',optionsValue:'Name',value:columnName"></select>
+	<button data-bind="click:$root.deleteFromList">Delete</button>
     </div>
     <script src="Scripts/jquery.js"></script>
     <script src="Scripts/Knockout.js"></script>
